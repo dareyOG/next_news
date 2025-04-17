@@ -1,15 +1,21 @@
 import NewsList from "@/components/NewsList"
 import { getLatestNews } from "@/lib/news"
 
-function LatestPage() {
-    const latest = getLatestNews()
+function LatestNewsPage() {
+
+    const latestNews = getLatestNews()
+
+    // console.log(latestNews);
+
 
     return (
         <>
-            <h2>Latest News</h2>
-            <NewsList news={latest} />
+            <h2>
+                Latest News
+            </h2>
+            <NewsList news={latestNews} />
         </>
     )
 }
 
-export default LatestPage
+export default LatestNewsPage
